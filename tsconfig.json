@@ -18,6 +18,11 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
+    "paths": {
+      "stf-components": [
+        "./dist/stf-components"
+      ]
+    },
     "module": "ES2022",
     "lib": [
       "ES2022",

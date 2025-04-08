@@ -1,0 +1,59 @@
+@forward '../../variables';
+
+* {
+    font-family: var(--font-primary);
+}
+
+input {
+    border-color: unset;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    /* Para que no interfiera con el clic en el input */
+    transition: all 0.3s ease;
+}
+
+.input-group label.floating,
+.input-group input:focus+label {
+    top: 0;
+    left: 5px;
+    transform: translateY(-50%) scale(0.9);
+    background: white;
+    padding: 0 5px;
+}
+
+.icon-input {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.error-text {
+    color: var(--color-danger) !important;
+    background-color: var(--color-white) !important;
+    font-weight: 500;
+    position: absolute;
+    width: 100%;
+    top: 47px;
+}

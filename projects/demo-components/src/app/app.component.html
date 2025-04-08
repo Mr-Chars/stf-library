@@ -1,0 +1,115 @@
+<div class="box-main">
+  <h1>Prueba de la Librería</h1>
+
+  <div class="box-main-buttons">
+    <h2>Select:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Select default</h3>
+      <div class="box-select-default">
+        <stf-select (emitOnSelect)="onSelectElement($event)" [stf-placeholder]="'Selecciona un item'"
+          [stf-items]="itemForSelectToProve" [stf-with-search]="true" [stf-item-value]="'nombre'"
+          [stf-item-key]="'id'"></stf-select>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-main-buttons">
+    <h2>Input:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Input default</h3>
+      <div class="box-select-default">
+        <stf-input [stf-label]="'Nombres'" [stf-value]="'fff2'" [stf-icon]="'person'" (emitInput)="onEmitInput($event)"
+          [stf-pattern]="'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{5,15}$'"></stf-input>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-main-buttons">
+    <h2>Textos:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Colores</h3>
+      <div class="box-buttons-default">
+        <stf-text [stf-label]="'Texto prueba 1'" [stf-size]="'subtitle'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 2'" [stf-size]="'subtitle'" [stf-color]="'secondary'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 3'" [stf-size]="'subtitle'" [stf-color]="'success'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 4'" [stf-size]="'subtitle'" [stf-color]="'info'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 5'" [stf-size]="'subtitle'" [stf-color]="'danger'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 6'" [stf-size]="'subtitle'" [stf-color]="'warning'"></stf-text>
+      </div>
+    </div>
+    <div class="box-main-buttons-default">
+      <h3>Tamaños</h3>
+      <div class="box-buttons-default">
+        <stf-text [stf-label]="'Texto prueba 1'" [stf-weight]="'900'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 2'" [stf-size]="'subtitle'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 3'" [stf-size]="'body'"></stf-text>
+        <stf-text [stf-label]="'Texto prueba 4'" [stf-size]="'detail'"></stf-text>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="box-main-buttons">
+    <h2>Botones:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Botones default</h3>
+      <div class="box-buttons-default">
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [label]="'primary'"></stf-button>
+
+        <stf-button [stf-color]="'secondary'" [stf-animation]="2" [label]="'secondary'"></stf-button>
+
+        <stf-button [stf-color]="'success'" [stf-animation]="3" [label]="'success'"
+          (emitOnClick)="eventClick()"></stf-button>
+
+        <stf-button [stf-color]="'info'" [stf-animation]="3" [label]="'info'" (emitOnClick)="eventClick()"></stf-button>
+
+        <stf-button [stf-color]="'danger'" [stf-animation]="3" [label]="'danger'"
+          (emitOnClick)="eventClick()"></stf-button>
+
+        <stf-button [stf-color]="'warning'" [stf-animation]="3" [label]="'warning'"
+          (emitOnClick)="eventClick()"></stf-button>
+      </div>
+    </div>
+    <div class="box-main-buttons-default">
+      <h3>Botones disabled</h3>
+      <div class="box-buttons-default">
+        <stf-button [stf-disabled]="true" [stf-color]="'primary'" [stf-animation]="1" [label]="'primary'"></stf-button>
+
+        <stf-button [stf-disabled]="true" [stf-color]="'secondary'" [stf-animation]="2"
+          [label]="'secondary'"></stf-button>
+
+        <stf-button [stf-disabled]="true" [stf-color]="'success'" [stf-animation]="3" [label]="'success'"
+          (emitOnClick)="eventClick()"></stf-button>
+
+        <stf-button [stf-disabled]="true" [stf-color]="'info'" [stf-animation]="3" [label]="'info'"
+          (emitOnClick)="eventClick()"></stf-button>
+
+        <stf-button [stf-disabled]="true" [stf-color]="'danger'" [stf-animation]="3" [label]="'danger'"
+          (emitOnClick)="eventClick()"></stf-button>
+
+        <stf-button [stf-disabled]="true" [stf-color]="'warning'" [stf-animation]="3" [label]="'warning'"
+          (emitOnClick)="eventClick()"></stf-button>
+      </div>
+    </div>
+    <div class="box-main-buttons-default">
+      <h3>Botones con iconos</h3>
+      <div class="box-buttons-default">
+        <stf-button [stf-color]="'danger'" [stf-animation]="1" [stf-icon]="'delete'"></stf-button>
+        <stf-button [stf-color]="'info'" [stf-animation]="1" [stf-icon]="'edit'"></stf-button>
+        <stf-button [stf-color]="'success'" [stf-animation]="1" [stf-icon]="'save'"></stf-button>
+        <stf-button [stf-color]="'secondary'" [stf-animation]="1" [stf-icon]="'person'"></stf-button>
+        <stf-button [stf-color]="'warning'" [stf-animation]="1" [stf-icon]="'search'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'refresh'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'sync'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'add_photo_alternate'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'home'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'menu'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'favorite'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'add'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'upload'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'manufacturing'"></stf-button>
+        <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'settings'"></stf-button>
+      </div>
+    </div>
+  </div>
+</div>

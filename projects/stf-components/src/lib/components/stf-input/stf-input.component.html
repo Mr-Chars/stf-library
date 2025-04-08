@@ -1,0 +1,8 @@
+<div class="input-group">
+    <stf-icon class="icon-input" [stf-type]="icon" [stf-color]="processClassValid('color-style')"></stf-icon>
+    <input type="text" [formControl]="valueInput" #inputRef [class]="processClassValid('border')">
+    <label [class.floating]="inputRef.value" [class]="processClassValid('color')">{{label}}</label>
+    <span *ngIf="errorDescription" class="error-text">{{errorDescription}}</span>
+    <span *ngIf="valueInput.invalid && (valueInput.dirty || valueInput.touched)"
+        class="error-text">{{getMessageError(valueInput.errors)}}</span>
+</div>

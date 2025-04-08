@@ -1,0 +1,19 @@
+<div class="box-main-select" #selectContainer>
+    <div (click)="isOpen=!isOpen" class="box-header">
+        <span *ngIf="placeholder&&!itemSelected[itemKey]">
+            {{placeholder}}
+        </span>
+        <span *ngIf="itemSelected[itemKey]">
+            {{itemSelected[itemValue]}}
+        </span>
+        <stf-icon [stf-type]="getIcon()" [stf-color]="iconColor"></stf-icon>
+    </div>
+    <div *ngIf="isOpen" class="box-items">
+        <div *ngIf="withSearch" class="box-search">
+            <input type="text" [formControl]="searchControl">
+        </div>
+        <div *ngFor="let item of itemsProcessed" (click)="selectItem(item)" class="box-item">
+            {{item[itemValue]}}
+        </div>
+    </div>
+</div>
