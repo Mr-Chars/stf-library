@@ -2,6 +2,27 @@
   <h1>Prueba de la Librería</h1>
 
   <div class="box-main-buttons">
+    <h2>Select color:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Default</h3>
+      <div class="box-select-default">
+        <stf-image-selector [stf-item-url]="'url'" [stf-item-id]="'id'" [images]="imageList"
+          (imageSelected)="onImageSelected($event)"></stf-image-selector>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-main-buttons">
+    <h2>Input color:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Default</h3>
+      <div class="box-select-default">
+        <stf-input-color (emitInputColor)="selectInputColor($event)" [stf-value]="'#333333'"></stf-input-color>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-main-buttons">
     <h2>Select:</h2>
     <div class="box-main-buttons-default">
       <h3>Select default</h3>

@@ -21,6 +21,11 @@ button {
     flex-direction: column;
 }
 
+.stf-btn-transparent {
+    background-color: unset !important;
+    color: var(--color-black) !important;
+}
+
 .stf-btn-success {
     background-color: var(--color-success) !important;
     color: var(--color-white) !important;

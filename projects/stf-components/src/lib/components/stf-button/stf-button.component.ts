@@ -10,10 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './stf-button.component.scss'
 })
 export class StfButtonComponent {
+  @Input({ alias: 'stf-type' }) stfType: string = 'button';
   @Output() emitOnClick = new EventEmitter();
 
   @Input() label: string = '';
-  @Input({ alias: 'stf-color' }) stf_color: 'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' = 'primary';
+  @Input({ alias: 'stf-color' }) stf_color: 'primary' | 'secondary' | 'success' | 'info' | 'danger' | 'warning' | 'transparent' = 'primary';
   @Input({ alias: 'stf-animation' }) stf_animation: number = 1;
   @Input({ alias: 'stf-disabled' }) stf_disabled: boolean = false;
   @Input({ alias: 'stf-icon' }) icon: string = '';

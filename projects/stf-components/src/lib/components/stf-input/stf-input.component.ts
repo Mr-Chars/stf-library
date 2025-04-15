@@ -17,6 +17,7 @@ export class StfInputComponent {
   @Input({ alias: 'stf-icon' }) icon: string = '';
   @Input({ alias: 'stf-pattern' }) pattern: string = '';
   @Input({ alias: 'stf-value' }) value: string = '';
+  @Input({ alias: 'stf-type' }) stfType: string = 'text';
 
   valueInput = new FormControl('', [this.processValidate()]);
   errorDescription = '';
