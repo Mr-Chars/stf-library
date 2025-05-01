@@ -7,7 +7,7 @@ import { StfTextComponent } from '../../../public-api';
   standalone: true,
   imports: [CommonModule, StfTextComponent],
   templateUrl: './stf-image-selector.component.html',
-  styleUrls: ['./stf-image-selector.component.css', '../../_variables.scss']
+  styleUrls: ['./stf-image-selector.component.scss', '../../_variables.scss']
 })
 export class StfImageSelectorComponent {
   @ViewChild('mainContainer') mainContainer!: ElementRef;

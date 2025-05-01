@@ -9,7 +9,7 @@ import { StfButtonComponent } from '../stf-button/stf-button.component';
   standalone: true,
   imports: [CommonModule, FormsModule, StfTextComponent, StfButtonComponent],
   templateUrl: './stf-input-color.component.html',
-  styleUrl: './stf-input-color.component.css'
+  styleUrl: './stf-input-color.component.scss'
 })
 export class StfInputColorComponent implements AfterViewInit {
   @ViewChild('mainContainer') mainContainer!: ElementRef;

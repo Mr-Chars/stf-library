@@ -2,7 +2,7 @@
   <h1>Prueba de la Librería</h1>
 
   <div class="box-main-buttons">
-    <h2>Select color:</h2>
+    <h2>Select imagen:</h2>
     <div class="box-main-buttons-default">
       <h3>Default</h3>
       <div class="box-select-default">
@@ -28,8 +28,8 @@
       <h3>Select default</h3>
       <div class="box-select-default">
         <stf-select (emitOnSelect)="onSelectElement($event)" [stf-placeholder]="'Selecciona un item'"
-          [stf-items]="itemForSelectToProve" [stf-with-search]="true" [stf-item-value]="'nombre'"
-          [stf-item-key]="'id'"></stf-select>
+          [stf-items]="itemForSelectToProve" [stf-with-search]="true" [stf-item-value]="'nombre'" [stf-item-key]="'id'"
+          [stf-item-key-selected]="'2'"></stf-select>
       </div>
     </div>
   </div>

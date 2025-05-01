@@ -1,123 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
 :root,
 :host {
-    --color-success: #17C653;
-    --color-primary: #4361EE;
-    --color-secondary: #737682;
-    --color-secondary-light: #E1E1E4;
-    --color-info: #2196F3;
-    --color-danger: #F8285A;
-    --color-warning: #F6C000;
-    --color-white: #FFFFFF;
-    --color-black: #000000;
+  --color-success: #17C653;
+  --color-primary: #4361EE;
+  --color-secondary: #737682;
+  --color-secondary-light: #E1E1E4;
+  --color-info: #2196F3;
+  --color-danger: #F8285A;
+  --color-warning: #F6C000;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
 
-    --font-primary: 'Nunito', sans-serif;
-    --font-secondary: 'Winky Sans', sans-serif;
+  --font-primary: 'Nunito', sans-serif;
+  --font-secondary: 'Winky Sans', sans-serif;
 }
 
 // class text-align
 .--text-align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .--text-align-center {
-    text-align: center;
+  text-align: center;
 }
 
 .--text-align-right {
-    text-align: right;
+  text-align: right;
 }
 
 
 // class font-weight
 .--font-weight-100 {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 .--font-weight-300 {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .--font-weight-400 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .--font-weight-500 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .--font-weight-600 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .--font-weight-700 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .--font-weight-800 {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .--font-weight-900 {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 // class colors
 .--color-success {
-    color: var(--color-success);
+  color: var(--color-success);
 }
 
 .--color-primary {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .--color-secondary {
-    color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .--color-info {
-    color: var(--color-info);
+  color: var(--color-info);
 }
 
 .--color-danger {
-    color: var(--color-danger);
+  color: var(--color-danger);
 }
 
 .--color-warning {
-    color: var(--color-warning);
+  color: var(--color-warning);
 }
 
 .--color-white {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .--color-black {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 // class borders
 .--border-success {
-    border: 1px solid var(--color-success);
+  border: 1px solid var(--color-success);
 }
 
 .--border-danger {
-    border: 1px solid var(--color-danger);
+  border: 1px solid var(--color-danger);
 }
 
 .--border-primary-2 {
-    border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-primary);
 }
 
 .--border-success-2 {
-    border: 2px solid var(--color-success);
+  border: 2px solid var(--color-success);
 }
 
 .--border-danger-2 {
-    border: 2px solid var(--color-danger);
+  border: 2px solid var(--color-danger);
 }
 
 
 .--cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }

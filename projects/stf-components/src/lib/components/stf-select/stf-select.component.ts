@@ -17,6 +17,7 @@ export class StfSelectComponent {
   @Input({ alias: 'stf-items' }) items: Array<any> = [];
   @Input({ alias: 'stf-item-value', required: true }) itemValue: string = '';
   @Input({ alias: 'stf-item-key', required: true }) itemKey: string = '';
+  @Input({ alias: 'stf-item-key-selected' }) itemKeySelected: string = '';
 
   @Input({ alias: 'stf-placeholder' }) placeholder: string = '';
   @Input({ alias: 'stf-with-search' }) withSearch = false;
@@ -30,6 +31,21 @@ export class StfSelectComponent {
 
   ngOnInit() {
     this.itemsProcessed = this.items;
+
+    if (this.itemKeySelected) {
+      // console.log('===================================');
+
+      // console.log(this.itemsProcessed);
+
+      const response = this.itemsProcessed.find((item) => item[this.itemKey] === this.itemKeySelected);
+      // console.log(this.itemKeySelected);
+      // console.log(response);
+      // console.log('===================================');
+      if (response) {
+        this.itemSelected = { ...response };
+      }
+    }
+
     this.searchControl.valueChanges
       .pipe(
         debounceTime(500), // Espera 500ms después de la última tecla antes de ejecutar la búsqueda
@@ -38,6 +54,8 @@ export class StfSelectComponent {
       .subscribe((results) => {
         this.itemsProcessed = this.items.filter((item) => item[this.itemValue].toLowerCase().includes(results!.toLowerCase()));
       });
+
+
   }
 
   @HostListener('document:click', ['$event'])
