@@ -8,3 +8,4 @@ export * from './lib/components/stf-select/stf-select.component';
 export * from './lib/components/stf-text/stf-text.component';
 export * from './lib/components/stf-input-color/stf-input-color.component';
 export * from './lib/components/stf-image-selector/stf-image-selector.component';
+export * from './lib/components/stf-icon-dropdown/stf-icon-dropdown.component';

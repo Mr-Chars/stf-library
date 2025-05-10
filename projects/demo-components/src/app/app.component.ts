@@ -8,6 +8,7 @@ import { StfInputComponent } from '../../../stf-components/src/lib/components/st
 import { StfInputColorComponent } from '../../../stf-components/src/lib/components/stf-input-color/stf-input-color.component';
 import { StfImageSelectorComponent } from '../../../stf-components/src/lib/components/stf-image-selector/stf-image-selector.component';
 import { StfIconDropdownComponent } from '../../../stf-components/src/lib/components/stf-icon-dropdown/stf-icon-dropdown.component';
+import { StfPaginationComponent } from '../../../stf-components/src/lib/components/stf-pagination/stf-pagination.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { StfIconDropdownComponent } from '../../../stf-components/src/lib/compon
     StfInputComponent,
     StfInputColorComponent,
     StfImageSelectorComponent,
-    StfIconDropdownComponent
+    StfIconDropdownComponent,
+    StfPaginationComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
