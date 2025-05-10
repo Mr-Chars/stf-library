@@ -7,18 +7,19 @@ import { ItemSelect } from '../../../stf-components/src/interfaces/generals';
 import { StfInputComponent } from '../../../stf-components/src/lib/components/stf-input/stf-input.component';
 import { StfInputColorComponent } from '../../../stf-components/src/lib/components/stf-input-color/stf-input-color.component';
 import { StfImageSelectorComponent } from '../../../stf-components/src/lib/components/stf-image-selector/stf-image-selector.component';
+import { StfIconDropdownComponent } from '../../../stf-components/src/lib/components/stf-icon-dropdown/stf-icon-dropdown.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     StfButtonComponent,
     StfTextComponent,
     StfSelectComponent,
     StfInputComponent,
     StfInputColorComponent,
-    StfImageSelectorComponent
+    StfImageSelectorComponent,
+    StfIconDropdownComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -45,6 +46,17 @@ export class AppComponent {
     {
       id: '3',
       nombre: 'dato 3',
+    }
+  ]
+
+  itemsForIconDropdown = [
+    {
+      id: 1,
+      name: 'ver',
+    },
+    {
+      id: 2,
+      name: 'editar',
     }
   ]
 

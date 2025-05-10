@@ -1,0 +1,24 @@
+.box-main {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 10px;
+  top: 22px;
+}
+
+.box-container {
+  position: relative;
+}
+
+.box-main div {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.box-main div:hover {
+  background-color: #f4f4f4;
+}
