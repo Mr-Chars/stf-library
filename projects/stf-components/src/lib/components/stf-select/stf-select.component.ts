@@ -28,20 +28,16 @@ export class StfSelectComponent {
   itemSelected: any = {};
   isOpen = false;
   itemsProcessed: Array<any> = [];
+  hasItemSelected = false;
 
   ngOnInit() {
     this.itemsProcessed = this.items;
 
     if (this.itemKeySelected) {
-      // console.log('===================================');
-
-      // console.log(this.itemsProcessed);
-
       const response = this.itemsProcessed.find((item) => item[this.itemKey] === this.itemKeySelected);
-      // console.log(this.itemKeySelected);
-      // console.log(response);
-      // console.log('===================================');
       if (response) {
+        this.hasItemSelected = true;
+        this.iconColor = 'var(--color-success)';
         this.itemSelected = { ...response };
       }
     }
@@ -73,5 +69,7 @@ export class StfSelectComponent {
     this.itemSelected = { ...item }
     this.emitOnSelect.emit(this.itemSelected);
     this.isOpen = false;
+    this.hasItemSelected = true;
+    this.iconColor = 'var(--color-success)';
   }
 }

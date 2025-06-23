@@ -13,7 +13,7 @@
 .box-header {
   display: flex;
   justify-content: space-between;
-  border: 2px solid var(--color-primary) !important;
+  border: 2px solid var(--color-primary);
   padding: 5px 10px;
   cursor: pointer;
   height: 44.8px;
@@ -29,7 +29,7 @@
 }
 
 .box-items {
-  border: 2px solid var(--color-primary) !important;
+  border: 2px solid var(--color-primary);
   background: var(--color-white) !important;
   position: absolute;
   width: 100%;
@@ -66,9 +66,13 @@
 .box-search input {
   height: 30px;
   border: 0.6px solid;
-  border-color: var(--color-primary) !important;
+  border-color: var(--color-primary);
 }
 
 .is-selected {
   background-color: var(--color-primary-light) !important;
+}
+
+.border-success {
+  border-color: var(--color-success) !important;
 }

@@ -1,5 +1,5 @@
 <div class="box-main-select" #selectContainer>
-  <div (click)="isOpen=!isOpen" class="box-header">
+  <div (click)="isOpen=!isOpen" class="box-header" [class.border-success]="hasItemSelected">
     <span *ngIf="placeholder&&!itemSelected[itemKey]">
       {{placeholder}}
     </span>
@@ -8,9 +8,9 @@
     </span>
     <stf-icon [stf-name]="getIcon()" [stf-color]="iconColor"></stf-icon>
   </div>
-  <div *ngIf="isOpen" class="box-items">
+  <div *ngIf="isOpen" class="box-items" [class.border-success]="hasItemSelected">
     <div *ngIf="withSearch" class="box-search">
-      <input type="text" [formControl]="searchControl">
+      <input type="text" [formControl]="searchControl" [class.border-success]="hasItemSelected">
     </div>
     <div *ngFor="let item of itemsProcessed" (click)="selectItem(item)" class="box-item"
       [class.is-selected]="itemSelected.id===item.id">
