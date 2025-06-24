@@ -2,6 +2,24 @@
   <h1>Prueba de la Librería</h1>
 
   <div class="box-main-buttons">
+    <h2>Cards:</h2>
+    <div class="box-main-buttons-default">
+      <h3>Default</h3>
+      <div class="box-select-default" style="flex-direction: column;">
+        <stf-card>
+          <div card-header #header>
+            <stf-text [stf-label]="'Texto prueba 1'" [stf-size]="'body'"></stf-text>
+          </div>
+          xd
+          <div card-footer #footer>
+            <button>Acción</button>
+          </div>
+        </stf-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="box-main-buttons">
     <h2>Naginator:</h2>
     <div class="box-main-buttons-default">
       <h3>Default</h3>
@@ -58,8 +76,8 @@
       <h3>Select default</h3>
       <div class="box-select-default">
         <stf-select (emitOnSelect)="onSelectElement($event)" [stf-placeholder]="'Selecciona un item'"
-          [stf-items]="itemForSelectToProve" [stf-with-search]="true" [stf-item-value]="'nombre'" [stf-item-key]="'id'"
-          ></stf-select>
+          [stf-items]="itemForSelectToProve" [stf-with-search]="true" [stf-item-value]="'nombre'"
+          [stf-item-key]="'id'"></stf-select>
       </div>
     </div>
   </div>

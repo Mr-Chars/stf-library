@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfButtonComponent } from '../../../stf-components/src/public-api';
+import { StfButtonComponent, StfCardComponent } from '../../../stf-components/src/public-api';
 import { StfTextComponent } from '../../../stf-components/src/lib/components/stf-text/stf-text.component';
 import { StfSelectComponent } from '../../../stf-components/src/lib/components/stf-select/stf-select.component';
 import { StfInputComponent } from '../../../stf-components/src/lib/components/stf-input/stf-input.component';
@@ -21,7 +21,8 @@ import { StfNavigationComponent } from '../../../stf-components/src/lib/componen
     StfImageSelectorComponent,
     StfIconDropdownComponent,
     StfPaginationComponent,
-    StfNavigationComponent
+    StfNavigationComponent,
+    StfCardComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
