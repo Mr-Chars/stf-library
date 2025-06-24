@@ -1,0 +1,7 @@
+<div class="box-main">
+  <stf-text [stf-label]="'Select components'" [stf-size]="'subtitle'" [stf-weight]="'700'"></stf-text>
+
+  <stf-select (emitOnSelect)="onSelectElement($event)" [stf-placeholder]="'Selecciona un item'"
+    [stf-items]="itemForSelectToProve" [stf-with-search]="true" [stf-item-value]="'nombre'"
+    [stf-item-key]="'id'"></stf-select>
+</div>

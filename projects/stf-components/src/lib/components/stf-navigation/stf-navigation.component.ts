@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './stf-navigation.component.html',
-  styleUrl: './stf-navigation.component.css'
+  styleUrl: './stf-navigation.component.scss'
 })
 export class StfNavigationComponent {
 

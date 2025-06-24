@@ -1,0 +1,58 @@
+<div class="box-main">
+  <stf-text [stf-label]="'Botones components'" [stf-size]="'subtitle'" [stf-weight]="'700'"></stf-text>
+  <h3>Botones default</h3>
+  <div class="box-buttons-default">
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [label]="'primary'"></stf-button>
+
+    <stf-button [stf-color]="'secondary'" [stf-animation]="2" [label]="'secondary'"></stf-button>
+
+    <stf-button [stf-color]="'success'" [stf-animation]="3" [label]="'success'"
+      (emitOnClick)="eventClick()"></stf-button>
+
+    <stf-button [stf-color]="'info'" [stf-animation]="3" [label]="'info'" (emitOnClick)="eventClick()"></stf-button>
+
+    <stf-button [stf-color]="'danger'" [stf-animation]="3" [label]="'danger'" (emitOnClick)="eventClick()"></stf-button>
+
+    <stf-button [stf-color]="'warning'" [stf-animation]="3" [label]="'warning'"
+      (emitOnClick)="eventClick()"></stf-button>
+  </div>
+
+  <h3>Botones disabled</h3>
+  <div class="box-buttons-default">
+    <stf-button [stf-disabled]="true" [stf-color]="'primary'" [stf-animation]="1" [label]="'primary'"></stf-button>
+
+    <stf-button [stf-disabled]="true" [stf-color]="'secondary'" [stf-animation]="2" [label]="'secondary'"></stf-button>
+
+    <stf-button [stf-disabled]="true" [stf-color]="'success'" [stf-animation]="3" [label]="'success'"
+      (emitOnClick)="eventClick()"></stf-button>
+
+    <stf-button [stf-disabled]="true" [stf-color]="'info'" [stf-animation]="3" [label]="'info'"
+      (emitOnClick)="eventClick()"></stf-button>
+
+    <stf-button [stf-disabled]="true" [stf-color]="'danger'" [stf-animation]="3" [label]="'danger'"
+      (emitOnClick)="eventClick()"></stf-button>
+
+    <stf-button [stf-disabled]="true" [stf-color]="'warning'" [stf-animation]="3" [label]="'warning'"
+      (emitOnClick)="eventClick()"></stf-button>
+  </div>
+
+  <h3>Botones con iconos</h3>
+  <div class="box-buttons-default">
+    <stf-button [stf-color]="'danger'" [stf-animation]="1" [stf-icon]="'delete'"></stf-button>
+    <stf-button [stf-color]="'info'" [stf-animation]="1" [stf-icon]="'edit'"></stf-button>
+    <stf-button [stf-color]="'success'" [stf-animation]="1" [stf-icon]="'save'"></stf-button>
+    <stf-button [stf-color]="'secondary'" [stf-animation]="1" [stf-icon]="'person'"></stf-button>
+    <stf-button [stf-color]="'warning'" [stf-animation]="1" [stf-icon]="'search'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'refresh'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'sync'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'add_photo_alternate'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'home'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'menu'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'favorite'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'add'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'upload'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'manufacturing'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'settings'"></stf-button>
+    <stf-button [stf-color]="'primary'" [stf-animation]="1" [stf-icon]="'more_vert'"></stf-button>
+  </div>
+</div>

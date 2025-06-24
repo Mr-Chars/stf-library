@@ -1,0 +1,40 @@
+.box-main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 95%;
+  margin: auto;
+  padding: 45px 0px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box-main-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box-main-buttons-default {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 95%;
+  margin: auto;
+}
+
+.box-buttons-default {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.box-select-default {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

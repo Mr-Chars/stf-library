@@ -8,7 +8,7 @@ import { StfTextComponent } from '../stf-text/stf-text.component';
   standalone: true,
   imports: [FormsModule, CommonModule, StfTextComponent],
   templateUrl: './stf-pagination.component.html',
-  styleUrl: './stf-pagination.component.css'
+  styleUrl: './stf-pagination.component.scss'
 })
 export class StfPaginationComponent {
   @Input() totalEntries = 25;

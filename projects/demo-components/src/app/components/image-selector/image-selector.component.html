@@ -1,0 +1,6 @@
+<div class="box-main">
+  <stf-text [stf-label]="'Select imagen components'" [stf-size]="'subtitle'" [stf-weight]="'700'"></stf-text>
+
+  <stf-image-selector [stf-item-url]="'url'" [stf-item-id]="'id'" [images]="imageList"
+    (imageSelected)="onImageSelected($event)"></stf-image-selector>
+</div>

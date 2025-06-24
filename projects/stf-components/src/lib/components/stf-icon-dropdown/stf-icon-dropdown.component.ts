@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [StfIconComponent, CommonModule],
   templateUrl: './stf-icon-dropdown.component.html',
-  styleUrl: './stf-icon-dropdown.component.css'
+  styleUrl: './stf-icon-dropdown.component.scss'
 })
 export class StfIconDropdownComponent {
   @ViewChild('mainContainer') mainContainer!: ElementRef;
