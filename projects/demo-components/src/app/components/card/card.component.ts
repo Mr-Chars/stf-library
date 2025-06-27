@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { StfCardComponent } from '../../../../../stf-components/src/public-api';
-import { StfTextComponent } from 'stf-components';
+import { StfCardComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-card',

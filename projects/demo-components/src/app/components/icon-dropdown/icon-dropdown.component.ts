@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfIconDropdownComponent, StfTextComponent } from 'stf-components';
+import { StfIconDropdownComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-icon-dropdown',

@@ -2,5 +2,6 @@
   <stf-text [stf-label]="'Input components'" [stf-size]="'subtitle'" [stf-weight]="'700'"></stf-text>
 
   <stf-input [stf-label]="'Nombres'" [stf-value]="'fff2'" [stf-icon]="'person'" (emitInput)="onEmitInput($event)"
+    (emitEnter)="onEmitEnter()"
     [stf-pattern]="'^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{5,15}$'"></stf-input>
 </div>

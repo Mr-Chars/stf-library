@@ -13,6 +13,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
 })
 export class StfInputComponent {
   @Output() emitInput = new EventEmitter();
+  @Output() emitEnter = new EventEmitter();
   @Input({ alias: 'stf-label' }) label: string = '';
   @Input({ alias: 'stf-icon' }) icon: string = '';
   @Input({ alias: 'stf-pattern' }) pattern: string = '';
@@ -50,6 +51,10 @@ export class StfInputComponent {
     if (this.pattern) {
       this.checkPattern();
     }
+  }
+
+  eventEnter() {
+    this.emitEnter.emit();
   }
 
   processClassValid(type: string) {

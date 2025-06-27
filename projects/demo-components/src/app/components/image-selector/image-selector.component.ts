@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfImageSelectorComponent, StfTextComponent } from 'stf-components';
+import { StfImageSelectorComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-image-selector',

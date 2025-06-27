@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfTextComponent } from 'stf-components';
+import { StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-text',

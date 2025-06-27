@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfPaginationComponent, StfTextComponent } from 'stf-components';
+import { StfPaginationComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-paginator',

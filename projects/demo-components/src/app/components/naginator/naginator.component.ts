@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfNavigationComponent, StfTextComponent } from 'stf-components';
+import { StfNavigationComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-naginator',

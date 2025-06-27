@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfButtonComponent, StfTextComponent } from 'stf-components';
+import { StfButtonComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-button',

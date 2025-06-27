@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StfInputColorComponent, StfTextComponent } from 'stf-components';
+import { StfInputColorComponent, StfTextComponent } from '../../../../../stf-components/src/public-api';
 
 @Component({
   selector: 'app-input-color',
