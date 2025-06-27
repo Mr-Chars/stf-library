@@ -1,7 +1,7 @@
 <div class="box-container" #mainContainer>
   <stf-icon [stf-name]="'more_vert'" [stf-color]="'secondary'" [stf-with-pointer]="true"
     (click)="togglePicker()"></stf-icon>
-  <div *ngIf="isOpen()" class="box-main">
+  <div *ngIf="isOpen()" class="box-main" [class]="stf_position">
     <div *ngFor="let item of stf_items" (click)="chooseItem(item)">
       {{item.name}}
     </div>
