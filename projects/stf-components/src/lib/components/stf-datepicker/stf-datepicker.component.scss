@@ -1,0 +1,75 @@
+.box-datepicker {
+  position: relative;
+}
+
+.box-header {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.icon-open-close {
+  position: absolute;
+  right: 10px;
+}
+
+.icon-calendar {
+  position: absolute;
+  left: 10px;
+}
+
+.text-data {
+  margin-left: 40px;
+}
+
+.box-body {
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
+  width: 280px;
+  position: absolute;
+  left: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.box-body-header {
+  padding: 10px 0px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.box-body-main {
+  display: flex;
+  padding: 5px 0;
+  height: 90px;
+}
+
+.box-body-footer {
+  padding: 5px;
+  border-top: 1px solid #ccc;
+}
+
+.list-moths,
+.list-years {
+  flex-basis: 50%;
+}
+
+.list-moths,
+.list-years {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.list-moths span,
+.list-years span {
+  padding: 5px 0px 5px 20px;
+}
+
+
+.list-moths span:hover,
+.list-years span:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}

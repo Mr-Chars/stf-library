@@ -1,0 +1,31 @@
+<div class="box-datepicker">
+  <div class="box-header" (click)="isOpen=!isOpen">
+    <stf-icon [stf-name]="'calendar_month'" class="icon-calendar" [stf-color]="'black'"></stf-icon>
+
+    <stf-text class="text-data" [stf-label]="'yyyy-mm-dd'" [stf-size]="'detail'" [stf-weight]="'700'"
+      [stf-color]="'black'"></stf-text>
+
+    <stf-icon [stf-name]="getIcon()" class="icon-open-close" [stf-color]="'black'"></stf-icon>
+  </div>
+  <div *ngIf="isOpen" class="box-body">
+    <div class="box-body-header">
+      <stf-text [stf-label]="dateSelectedDescription()" [stf-size]="'detail'" [stf-weight]="'700'" [stf-color]="'black'"
+        [stf-align]="'center'"></stf-text>
+    </div>
+    <div class="box-body-main">
+      <div class="list-moths">
+        <span *ngFor="let month of months" (click)="selectMonth(month)">
+          {{month.name}}
+        </span>
+      </div>
+      <div class="list-years">
+        <span *ngFor="let year of years" (click)="selectYear(year)">
+          {{year}}
+        </span>
+      </div>
+    </div>
+    <div class="box-body-footer">
+      <stf-button [stf-color]="'success'" [stf-animation]="1" [label]="'Establecer'"></stf-button>
+    </div>
+  </div>
+</div>
