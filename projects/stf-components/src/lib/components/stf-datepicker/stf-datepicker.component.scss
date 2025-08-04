@@ -1,3 +1,7 @@
+.d-flex {
+  display: flex;
+}
+
 .box-datepicker {
   position: relative;
 }
@@ -23,7 +27,7 @@
   margin-left: 40px;
 }
 
-.box-body {
+.box-body-step-1 {
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
   width: 280px;
   position: absolute;
@@ -42,12 +46,13 @@
 .box-body-main {
   display: flex;
   padding: 5px 0;
-  height: 90px;
+  height: 190px;
 }
 
 .box-body-footer {
   padding: 5px;
   border-top: 1px solid #ccc;
+  justify-content: space-between;
 }
 
 .list-moths,
@@ -72,4 +77,51 @@
 .list-years span:hover {
   background-color: #f3f3f3;
   cursor: pointer;
+}
+
+/////////////////////////////////////////////////////////////////
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: calc(100% / 7);
+  box-sizing: border-box;
+  /* Asegura que el padding no aumente el ancho */
+}
+
+th {
+  background-color: #f8f8f8;
+  color: #666;
+  font-weight: bold;
+}
+
+td {
+  background-color: #fff;
+}
+
+td.dia-actual {
+  background-color: #eaf6ff;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+td.dia-actual:hover {
+  background-color: #fff;
+}
+
+td.dia-otro-mes {
+  color: #aaa;
+  background-color: #fdfdfd;
+}
+
+.item-active {
+  background-color: #ccc;
 }

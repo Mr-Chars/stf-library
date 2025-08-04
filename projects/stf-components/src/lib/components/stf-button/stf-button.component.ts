@@ -18,6 +18,8 @@ export class StfButtonComponent {
   @Input({ alias: 'stf-animation' }) stf_animation: number = 1;
   @Input({ alias: 'stf-disabled' }) stf_disabled: boolean = false;
   @Input({ alias: 'stf-icon' }) icon: string = '';
+  @Input({ alias: 'stf-icon-color' }) icon_color: string = 'success';
+  @Input({ alias: 'stf-width' }) width: string = 'auto';
 
   processed_classes = '';
 

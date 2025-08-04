@@ -2,30 +2,78 @@
   <div class="box-header" (click)="isOpen=!isOpen">
     <stf-icon [stf-name]="'calendar_month'" class="icon-calendar" [stf-color]="'black'"></stf-icon>
 
-    <stf-text class="text-data" [stf-label]="'yyyy-mm-dd'" [stf-size]="'detail'" [stf-weight]="'700'"
+    <stf-text class="text-data" [stf-label]="dateSelected" [stf-size]="'detail'" [stf-weight]="'700'"
       [stf-color]="'black'"></stf-text>
 
     <stf-icon [stf-name]="getIcon()" class="icon-open-close" [stf-color]="'black'"></stf-icon>
   </div>
-  <div *ngIf="isOpen" class="box-body">
+  <div *ngIf="isOpen" class="box-body-step-1">
     <div class="box-body-header">
       <stf-text [stf-label]="dateSelectedDescription()" [stf-size]="'detail'" [stf-weight]="'700'" [stf-color]="'black'"
         [stf-align]="'center'"></stf-text>
     </div>
     <div class="box-body-main">
+      @if (step===1) {
       <div class="list-moths">
-        <span *ngFor="let month of months" (click)="selectMonth(month)">
-          {{month.name}}
+        <span *ngFor="let month of months" (click)="selectMonth(month)"
+          [class.item-active]="month.id===monthSelected().id">
+          <stf-text [stf-label]="month.name" [stf-size]="'detail'" [stf-weight]="'500'"
+            [stf-color]="'black'"></stf-text>
         </span>
       </div>
       <div class="list-years">
-        <span *ngFor="let year of years" (click)="selectYear(year)">
-          {{year}}
+        <span *ngFor="let year of years" (click)="selectYear(year)" [class.item-active]="year===yearSelected()">
+          <stf-text [stf-label]="''+year" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
         </span>
       </div>
+      }@else if (step===2){
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <stf-text [stf-label]="'Lun'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+            <th>
+              <stf-text [stf-label]="'Mar'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+            <th>
+              <stf-text [stf-label]="'Mié'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+            <th>
+              <stf-text [stf-label]="'Jue'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+            <th>
+              <stf-text [stf-label]="'Vie'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+            <th>
+              <stf-text [stf-label]="'Sáb'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+            <th>
+              <stf-text [stf-label]="'Dom'" [stf-size]="'detail'" [stf-weight]="'500'" [stf-color]="'black'"></stf-text>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let semana of calendarioSemanas">
+            <td *ngFor="let dia of semana.dias" [class.dia-actual]="dia?.isFromCurrentMonth"
+              [class.dia-otro-mes]="!dia?.isFromCurrentMonth" (click)="selectDay(dia)">
+              <stf-text [stf-label]="''+dia?.number" [stf-size]="'detail'" [stf-weight]="'500'"
+                [stf-color]="'black'"></stf-text>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      }
+
     </div>
-    <div class="box-body-footer">
-      <stf-button [stf-color]="'success'" [stf-animation]="1" [label]="'Establecer'"></stf-button>
+    <div class="box-body-footer" [class.d-flex]="step===2">
+      <stf-button *ngIf="step===1" [stf-disabled]="!avaibleToProcessDay()" [stf-color]="'primary'" [stf-animation]="1"
+        [label]="'Establecer'" [stf-icon]="'delete'" [stf-width]="'100%'" (emitOnClick)="getDays()"></stf-button>
+
+      <stf-button *ngIf="step===2" [stf-color]="'primary'" [stf-animation]="1" [label]="'Volver'"
+        (emitOnClick)="backToChooseMonthAndYear()"></stf-button>
+      <stf-button *ngIf="step===2" [stf-color]="'success'" [stf-animation]="1" [label]="'Seleccionar'"
+        (emitOnClick)="setAndEmitDate()"></stf-button>
     </div>
   </div>
 </div>

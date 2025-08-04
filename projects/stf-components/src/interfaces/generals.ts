@@ -4,6 +4,15 @@ export interface ItemSelect {
 }
 
 export interface IMonth {
-  id: number,
+  id: string,
   name: string,
+}
+
+export interface DiaCalendario {
+  number: number;
+  isFromCurrentMonth: boolean;
+}
+
+export interface SemanaCalendario {
+  dias: (DiaCalendario | null)[];
 }
