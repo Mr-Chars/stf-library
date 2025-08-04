@@ -27,14 +27,15 @@
   margin-left: 40px;
 }
 
-.box-body-step-1 {
+.box-body {
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
-  width: 280px;
+  width: 285px;
   position: absolute;
   left: 5px;
   margin-top: 5px;
   box-sizing: border-box;
   border-radius: 5px;
+  background: #fff;
 }
 
 .box-body-header {
@@ -45,8 +46,7 @@
 
 .box-body-main {
   display: flex;
-  padding: 5px 0;
-  height: 190px;
+  height: 230px;
 }
 
 .box-body-footer {
