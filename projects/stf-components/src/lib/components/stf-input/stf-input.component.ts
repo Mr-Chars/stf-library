@@ -58,35 +58,37 @@ export class StfInputComponent {
   }
 
   processClassValid(type: string) {
+    const successValidated = new RegExp(this.pattern).test(this.valueInput.value!);
     if (type === 'border') {
       if (!this.hasChanged && !this.wasFocussed) {
-        return '--border-primary-2';
+        return '--border-black';
       }
-      const withError = new RegExp(this.pattern).test(this.valueInput.value!);
 
-      if (!withError) {
+      if (!successValidated) {
         return '--border-danger-2';
       } else {
         return '--border-success-2';
       }
-    } else if (type === 'color') {
-      if (!this.hasChanged && !this.wasFocussed) {
-        return '--color-primary';
-      }
-      const withError = new RegExp(this.pattern).test(this.valueInput.value!);
+    }
 
-      if (!withError) {
+    if (type === 'color') {
+      if (!this.hasChanged && !this.wasFocussed) {
+        return '--color-black';
+      }
+
+      if (!successValidated) {
         return '--color-danger';
       } else {
         return '--color-success';
       }
-    } else if (type === 'color-style') {
-      if (!this.hasChanged && !this.wasFocussed) {
-        return 'var(--color-primary)';
-      }
-      const withError = new RegExp(this.pattern).test(this.valueInput.value!);
+    }
 
-      if (!withError) {
+    if (type === 'color-style') {
+      if (!this.hasChanged && !this.wasFocussed) {
+        return 'var(--color-black)';
+      }
+
+      if (!successValidated) {
         return 'var(--color-danger)';
       } else {
         return 'var(--color-success)';
