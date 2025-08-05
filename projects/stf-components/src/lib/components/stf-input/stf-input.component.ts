@@ -61,7 +61,7 @@ export class StfInputComponent {
     const successValidated = new RegExp(this.pattern).test(this.valueInput.value!);
     if (type === 'border') {
       if (!this.hasChanged && !this.wasFocussed) {
-        return '--border-black';
+        return '--border-black-2';
       }
 
       if (!successValidated) {

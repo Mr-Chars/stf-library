@@ -109,8 +109,6 @@ export class StfDatepickerComponent {
   openWindow() {
     if (!this.isOpen) {
       const rect = this.activatorElement.nativeElement.getBoundingClientRect();
-      console.log(window.innerHeight);
-      console.log(rect);
       const calendarHeight = 300;
 
       if (window.innerHeight - rect.bottom < calendarHeight) {
