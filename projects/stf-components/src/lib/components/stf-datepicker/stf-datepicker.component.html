@@ -1,5 +1,5 @@
-<div class="box-datepicker">
-  <div class="box-header" (click)="isOpen=!isOpen">
+<div #activatorElement class="box-datepicker">
+  <div class="box-header" (click)="openWindow()">
     <stf-icon [stf-name]="'calendar_month'" class="icon-calendar" [stf-color]="'black'"></stf-icon>
 
     <stf-text class="text-data" [stf-label]="dateSelected" [stf-size]="'detail'" [stf-weight]="'700'"
@@ -7,7 +7,7 @@
 
     <stf-icon [stf-name]="getIcon()" class="icon-open-close" [stf-color]="'black'"></stf-icon>
   </div>
-  <div *ngIf="isOpen" class="box-body">
+  <div *ngIf="isOpen" class="box-body" [ngClass]="{'open-up': openDirection === 'up'}">
     <div class="box-body-header">
       <stf-text [stf-label]="dateSelectedDescription()" [stf-size]="'detail'" [stf-weight]="'700'" [stf-color]="'black'"
         [stf-align]="'center'"></stf-text>

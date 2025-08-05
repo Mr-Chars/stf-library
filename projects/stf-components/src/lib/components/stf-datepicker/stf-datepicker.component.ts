@@ -1,4 +1,4 @@
-import { Component, computed, EventEmitter, Input, Output, signal, WritableSignal } from '@angular/core';
+import { Component, computed, ElementRef, EventEmitter, Input, Output, signal, ViewChild, WritableSignal } from '@angular/core';
 import { StfTextComponent } from '../stf-text/stf-text.component';
 import { StfIconComponent } from '../stf-icon/stf-icon.component';
 import { CommonModule } from '@angular/common';
@@ -18,6 +18,7 @@ import { DiaCalendario, IMonth, SemanaCalendario } from '../../../interfaces/gen
   styleUrl: './stf-datepicker.component.scss'
 })
 export class StfDatepickerComponent {
+  @ViewChild('activatorElement') activatorElement!: ElementRef;
   @Input({ alias: 'stf-quantity-years' }) quantityYears = 10;
   @Output() emitDate = new EventEmitter<any>();
   isOpen = false;
@@ -100,9 +101,27 @@ export class StfDatepickerComponent {
   daySelected: WritableSignal<number | ''> = signal('');
 
   calendarioSemanas: SemanaCalendario[] = [];
-
+  openDirection = 'up';
   ngOnInit() {
     this.years = this.getLastXYears(this.quantityYears);
+  }
+
+  openWindow() {
+    if (!this.isOpen) {
+      const rect = this.activatorElement.nativeElement.getBoundingClientRect();
+      console.log(window.innerHeight);
+      console.log(rect);
+      const calendarHeight = 300;
+
+      if (window.innerHeight - rect.bottom < calendarHeight) {
+        this.openDirection = 'up';
+      } else {
+        this.openDirection = 'down';
+      }
+      this.isOpen = true;
+    } else {
+      this.isOpen = false;
+    }
   }
 
   setAndEmitDate() {
