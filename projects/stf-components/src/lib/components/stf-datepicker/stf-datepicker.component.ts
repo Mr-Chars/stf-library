@@ -1,4 +1,4 @@
-import { Component, computed, ElementRef, EventEmitter, Input, Output, signal, ViewChild, WritableSignal } from '@angular/core';
+import { Component, computed, ElementRef, EventEmitter, HostListener, Input, Output, signal, ViewChild, WritableSignal } from '@angular/core';
 import { StfTextComponent } from '../stf-text/stf-text.component';
 import { StfIconComponent } from '../stf-icon/stf-icon.component';
 import { CommonModule } from '@angular/common';
@@ -18,9 +18,18 @@ import { DiaCalendario, IMonth, SemanaCalendario } from '../../../interfaces/gen
   styleUrl: './stf-datepicker.component.scss'
 })
 export class StfDatepickerComponent {
+
   @ViewChild('activatorElement') activatorElement!: ElementRef;
   @Input({ alias: 'stf-quantity-years' }) quantityYears = 10;
   @Output() emitDate = new EventEmitter<any>();
+
+  @HostListener('document:click', ['$event'])
+  onClickOutside(event: MouseEvent) {
+    if (this.activatorElement && !this.activatorElement.nativeElement.contains(event.target)) {
+      this.isOpen = false;
+    }
+  }
+
   isOpen = false;
   months: Array<IMonth> = [
     {

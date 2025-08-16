@@ -72,8 +72,8 @@
 
       <stf-button *ngIf="step===2" [stf-color]="'primary'" [stf-animation]="1" [label]="'Volver'"
         (emitOnClick)="backToChooseMonthAndYear()"></stf-button>
-      <stf-button *ngIf="step===2" [stf-color]="'success'" [stf-animation]="1" [label]="'Seleccionar'"
-        (emitOnClick)="setAndEmitDate()"></stf-button>
+      <stf-button *ngIf="step===2" [stf-disabled]="!daySelected()" [stf-color]="'success'" [stf-animation]="1"
+        [label]="'Seleccionar'" (emitOnClick)="setAndEmitDate()"></stf-button>
     </div>
   </div>
 </div>
