@@ -21,7 +21,7 @@ export class StfSelectComponent {
 
   @Input({ alias: 'stf-placeholder' }) placeholder: string = '';
   @Input({ alias: 'stf-with-search' }) withSearch = false;
-  @Input({ alias: 'stf-icon-color' }) iconColor = 'var(--color-primary)';
+  @Input({ alias: 'stf-icon-color' }) iconColor = 'var(--color-black)';
 
   searchControl = new FormControl('');
 
