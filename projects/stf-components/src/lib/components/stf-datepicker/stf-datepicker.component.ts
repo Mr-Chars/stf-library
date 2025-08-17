@@ -4,6 +4,7 @@ import { StfIconComponent } from '../stf-icon/stf-icon.component';
 import { CommonModule } from '@angular/common';
 import { StfButtonComponent } from '../stf-button/stf-button.component';
 import { DiaCalendario, IMonth, SemanaCalendario } from '../../../interfaces/generals';
+import { MONTHS } from '../../../constans/generals';
 
 @Component({
   selector: 'stf-datepicker',
@@ -18,10 +19,12 @@ import { DiaCalendario, IMonth, SemanaCalendario } from '../../../interfaces/gen
   styleUrl: './stf-datepicker.component.scss'
 })
 export class StfDatepickerComponent {
-
   @ViewChild('activatorElement') activatorElement!: ElementRef;
   @Input({ alias: 'stf-quantity-years' }) quantityYears = 10;
   @Output() emitDate = new EventEmitter<any>();
+  @Input({ alias: 'send-value' }) set sendValue(value: any) {
+    this.dateSelected = value;
+  }
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent) {
@@ -31,56 +34,7 @@ export class StfDatepickerComponent {
   }
 
   isOpen = false;
-  months: Array<IMonth> = [
-    {
-      id: '01',
-      name: 'Enero',
-    },
-    {
-      id: '02',
-      name: 'Febrero',
-    },
-    {
-      id: '03',
-      name: 'Marzo',
-    },
-    {
-      id: '04',
-      name: 'Abril',
-    },
-    {
-      id: '05',
-      name: 'Mayo',
-    },
-    {
-      id: '06',
-      name: 'Junio',
-    },
-    {
-      id: '07',
-      name: 'Julio',
-    },
-    {
-      id: '08',
-      name: 'Agosto',
-    },
-    {
-      id: '09',
-      name: 'Septiembre',
-    },
-    {
-      id: '10',
-      name: 'Octubre',
-    },
-    {
-      id: '11',
-      name: 'Noviembre',
-    },
-    {
-      id: '12',
-      name: 'Diciembre',
-    },
-  ];
+  months: Array<IMonth> = MONTHS;
 
   step = 1;
   years: number[] = [];
@@ -111,6 +65,7 @@ export class StfDatepickerComponent {
 
   calendarioSemanas: SemanaCalendario[] = [];
   openDirection = 'up';
+
   ngOnInit() {
     this.years = this.getLastXYears(this.quantityYears);
   }
@@ -146,6 +101,7 @@ export class StfDatepickerComponent {
     this.step = 1;
     this.daySelected.set('');
   }
+
   avaibleToProcessDay() {
     return +this.yearSelected() > 0 && this.monthSelected().id;
   }
@@ -196,7 +152,6 @@ export class StfDatepickerComponent {
     }
 
     this.calendarioSemanas = semanas;
-    // this.nombreMesActual = this.obtenerNombreMes(this.mes);
     this.step = 2;
   }
 
@@ -229,7 +184,6 @@ export class StfDatepickerComponent {
 
     return ultimosAnios;
   }
-
 
   getIcon() {
     return !this.isOpen ? 'keyboard_arrow_down' : 'keyboard_arrow_up';
