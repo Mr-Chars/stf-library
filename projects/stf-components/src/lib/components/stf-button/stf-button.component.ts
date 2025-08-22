@@ -20,6 +20,7 @@ export class StfButtonComponent {
   @Input({ alias: 'stf-icon' }) icon: string = '';
   @Input({ alias: 'stf-icon-color' }) icon_color: string = 'success';
   @Input({ alias: 'stf-width' }) width: string = 'auto';
+  @Input({ alias: 'stf-loading' }) loading: boolean = false;
 
   processed_classes = '';
 

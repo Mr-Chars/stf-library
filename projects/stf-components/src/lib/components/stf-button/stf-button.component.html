@@ -1,5 +1,6 @@
-<button [type]="stfType" [disabled]="stf_disabled" [class]="processed_classes" (click)="eventClick()"
+<button [type]="stfType" [disabled]="stf_disabled||loading" [class]="processed_classes" (click)="eventClick()"
   [style.width]="width">
+  <stf-icon class="loading-option" *ngIf="loading" [stf-name]="'cycle'" [stf-color]="icon_color"></stf-icon>
   <stf-icon *ngIf="icon" [stf-name]="icon" [stf-color]="icon_color"></stf-icon>
   <div *ngIf="label" class="box-label">
     {{ label }}

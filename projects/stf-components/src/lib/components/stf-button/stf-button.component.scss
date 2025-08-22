@@ -16,6 +16,20 @@ button {
   justify-content: center;
 }
 
+.loading-option {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .box-label {
   display: flex;
   justify-content: center;
