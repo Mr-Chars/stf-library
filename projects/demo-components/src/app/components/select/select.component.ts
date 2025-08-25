@@ -15,15 +15,15 @@ export class SelectComponent {
 
   itemForSelectToProve: Array<any> = [
     {
-      id: '1',
+      id: 1,
       nombre: 'dato 1',
     },
     {
-      id: '2',
+      id: 2,
       nombre: 'dato 2',
     },
     {
-      id: '3',
+      id: 3,
       nombre: 'dato 3',
     }
   ]

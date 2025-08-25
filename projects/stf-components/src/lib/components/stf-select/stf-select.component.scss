@@ -10,6 +10,14 @@
   position: relative;
 }
 
+.box-label-top {
+  position: absolute;
+  transform: translateY(-50%) scale(0.9);
+  top: 0;
+  left: 5px;
+  background: white;
+}
+
 .box-header {
   display: flex;
   justify-content: space-between;

@@ -1,5 +1,8 @@
 <div #activatorElement class="box-datepicker">
   <div class="box-header" (click)="openWindow()">
+    <stf-text *ngIf="label" class="box-label-top" [stf-label]="label" [stf-size]="'detail'" [stf-weight]="'700'"
+      [stf-color]="'black'"></stf-text>
+
     <stf-icon [stf-name]="'calendar_month'" class="icon-calendar" [stf-color]="'black'"></stf-icon>
 
     <stf-text class="text-data" [stf-label]="dateSelected" [stf-size]="'detail'" [stf-weight]="'700'"

@@ -1,8 +1,8 @@
 <div class="box-main-select" #selectContainer>
   <div (click)="isOpen=!isOpen" class="box-header" [class.border-success]="hasItemSelected">
-    <span *ngIf="placeholder&&!itemSelected[itemKey]">
-      {{placeholder}}
-    </span>
+    <stf-text *ngIf="placeholder" [class.box-label-top]="itemSelected[itemKey]" [stf-label]="placeholder"
+      [stf-size]="'detail'" [stf-weight]="'700'" [stf-color]="'black'"></stf-text>
+
     <span *ngIf="itemSelected[itemKey]">
       {{itemSelected[itemValue]}}
     </span>

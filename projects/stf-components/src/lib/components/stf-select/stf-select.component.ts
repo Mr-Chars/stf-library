@@ -3,11 +3,12 @@ import { StfIconComponent } from '../stf-icon/stf-icon.component';
 import { CommonModule } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { StfTextComponent } from '../stf-text/stf-text.component';
 
 @Component({
   selector: 'stf-select',
   standalone: true,
-  imports: [StfIconComponent, CommonModule, ReactiveFormsModule],
+  imports: [StfIconComponent, CommonModule, ReactiveFormsModule, StfTextComponent],
   templateUrl: './stf-select.component.html',
   styleUrl: './stf-select.component.scss'
 })
@@ -34,7 +35,7 @@ export class StfSelectComponent {
     this.itemsProcessed = this.items;
 
     if (this.itemKeySelected) {
-      const response = this.itemsProcessed.find((item) => item[this.itemKey] === this.itemKeySelected);
+      const response = this.itemsProcessed.find((item) => item[this.itemKey].toString() === this.itemKeySelected.toString());
       if (response) {
         this.hasItemSelected = true;
         this.iconColor = 'var(--color-success)';

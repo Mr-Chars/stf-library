@@ -20,6 +20,7 @@ import { MONTHS } from '../../../constans/generals';
 })
 export class StfDatepickerComponent {
   @ViewChild('activatorElement') activatorElement!: ElementRef;
+  @Input({ alias: 'stf-label' }) label = '';
   @Input({ alias: 'stf-quantity-years' }) quantityYears = 10;
   @Output() emitDate = new EventEmitter<any>();
   @Input({ alias: 'send-value' }) set sendValue(value: any) {
