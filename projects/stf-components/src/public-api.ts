@@ -13,3 +13,4 @@ export * from './lib/components/stf-pagination/stf-pagination.component';
 export * from './lib/components/stf-navigation/stf-navigation.component';
 export * from './lib/components/stf-card/stf-card.component';
 export * from './lib/components/stf-datepicker/stf-datepicker.component';
+export * from './lib/components/stf-skeleton-screen/stf-skeleton-screen.component';

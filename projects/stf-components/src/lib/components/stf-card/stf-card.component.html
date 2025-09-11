@@ -6,11 +6,12 @@
 
   <!-- Slot principal (default) -->
   <div class="card-body">
-    <ng-content></ng-content>
+    <ng-content *ngIf="!loading"></ng-content>
+    <stf-skeleton-screen *ngIf="loading"></stf-skeleton-screen>
   </div>
 
   <!-- Slot para footer -->
-  <div class="card-footer" *ngIf="showFooter">
+  <div class="card-footer" *ngIf="showFooter && !loading">
     <ng-content select="[card-footer]"></ng-content>
   </div>
 </div>

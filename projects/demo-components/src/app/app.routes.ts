@@ -11,6 +11,7 @@ import { InputComponent } from './components/input/input.component';
 import { TextComponent } from './components/text/text.component';
 import { ButtonComponent } from './components/button/button.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { IconComponent } from './components/icon/icon.component';
 
 export const routes: Routes = [
   {
@@ -60,5 +61,9 @@ export const routes: Routes = [
   {
     path: 'date-picker',
     component: DatepickerComponent,
+  },
+  {
+    path: 'icon',
+    component: IconComponent,
   },
 ];

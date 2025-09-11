@@ -39,7 +39,7 @@ export class StfInputComponent {
     this.valueInput.setValue(this.value);
     this.valueInput.valueChanges
       .pipe(
-        debounceTime(500), // Espera 500ms después de la última tecla antes de ejecutar la búsqueda
+        debounceTime(50), // Espera 500ms después de la última tecla antes de ejecutar la búsqueda
         distinctUntilChanged(), // Evita peticiones si el valor no cambió
       )
       .subscribe((results) => {
@@ -85,13 +85,13 @@ export class StfInputComponent {
 
     if (type === 'color-style') {
       if (!this.hasChanged && !this.wasFocussed) {
-        return 'var(--color-black)';
+        return 'black';
       }
 
       if (!successValidated) {
-        return 'var(--color-danger)';
+        return 'danger';
       } else {
-        return 'var(--color-success)';
+        return 'success';
       }
     }
     return '';

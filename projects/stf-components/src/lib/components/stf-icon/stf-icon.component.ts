@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, computed, Input, signal, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'stf-icon',
@@ -10,6 +10,11 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 })
 export class StfIconComponent {
   @Input({ alias: 'stf-name' }) name: string = '';
-  @Input({ alias: 'stf-color' }) color: string = 'var(--color-success)';
+  @Input({ alias: 'stf-color' }) color: string = 'success';
   @Input({ alias: 'stf-with-pointer' }) withPointer: boolean = false;
+  @Input({ alias: 'stf-size' }) size: 'small' | 'xxxl' = 'small';
+
+  colorProcessed = computed(() => {
+    return `var(--color-${this.color})`;
+  });
 }
