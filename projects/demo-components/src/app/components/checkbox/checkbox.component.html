@@ -1,0 +1,9 @@
+<div class="box-main">
+  <stf-text [stf-label]="'Textos components'" [stf-size]="'subtitle'" [stf-weight]="'700'"></stf-text>
+
+  <h3>Colores</h3>
+  <div class="box-default">
+    <stf-checkbox label="I agree to the terms and conditions" [(ngModel)]="areTermsAccepted" (change)="listenChange()">
+    </stf-checkbox>
+  </div>
+</div>

@@ -1,28 +1,34 @@
 @forward '../../variables';
 
 * {
-    font-family: var(--font-primary);
+  font-family: var(--font-primary);
 }
 
 :host {
-    --text-size-title: clamp(1.8rem, 4vw, 2.5rem);
-    --text-size-subtitle: clamp(1.2rem, 3vw, 1.75rem);
-    --text-size-body: clamp(1rem, 2.5vw, 1.25rem);
-    --text-size-detail: clamp(0.9rem, 2vw, 1rem);
+  --text-size-title: clamp(1.8rem, 4vw, 2.5rem);
+  --text-size-subtitle: clamp(1.2rem, 3vw, 1.75rem);
+  --text-size-body: clamp(1rem, 2.5vw, 1.25rem);
+  --text-size-detail: clamp(0.9rem, 2vw, 1rem);
 }
 
 .text-size-title {
-    font-size: var(--text-size-title);
+  font-size: var(--text-size-title);
 }
 
 .text-size-subtitle {
-    font-size: var(--text-size-subtitle);
+  font-size: var(--text-size-subtitle);
 }
 
 .text-size-body {
-    font-size: var(--text-size-body);
+  font-size: var(--text-size-body);
 }
 
 .text-size-detail {
-    font-size: var(--text-size-detail);
+  font-size: var(--text-size-detail);
+}
+
+.one-line-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

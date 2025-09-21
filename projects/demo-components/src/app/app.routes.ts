@@ -12,6 +12,7 @@ import { TextComponent } from './components/text/text.component';
 import { ButtonComponent } from './components/button/button.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { IconComponent } from './components/icon/icon.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 export const routes: Routes = [
   {
@@ -65,5 +66,9 @@ export const routes: Routes = [
   {
     path: 'icon',
     component: IconComponent,
+  },
+  {
+    path: 'checkbox',
+    component: CheckboxComponent,
   },
 ];

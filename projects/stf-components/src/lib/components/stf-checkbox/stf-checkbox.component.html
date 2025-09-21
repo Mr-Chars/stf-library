@@ -1,0 +1,8 @@
+<div class="checkbox-container">
+  <input type="checkbox" [checked]="ngModel" [disabled]="isDisabled" (change)="onCheckboxChange($event)"
+    id="reusable-checkbox-{{label}}" class="hidden-checkbox">
+  <label for="reusable-checkbox-{{label}}" class="custom-checkmark"></label>
+  <label for="reusable-checkbox-{{label}}" style="user-select: none; ">
+    <stf-text [stf-label]="label" [stf-size]="'detail'" [stf-color]="'black'" [stf-weight]="'500'"></stf-text>
+  </label>
+</div>

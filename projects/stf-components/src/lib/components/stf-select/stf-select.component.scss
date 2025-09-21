@@ -18,6 +18,10 @@
   background: white;
 }
 
+stf-text {
+  width: 100%;
+}
+
 .box-header {
   display: flex;
   justify-content: space-between;
@@ -28,6 +32,7 @@
   box-sizing: border-box;
   gap: 10px;
   border-radius: 4px;
+  width: 100%;
 }
 
 .box-header * {
@@ -83,4 +88,12 @@
 
 .border-success {
   border-color: var(--color-success) !important;
+}
+
+.text-item-selected {
+  width: 80%;
+}
+
+.text-item-to-choose {
+  display: flex;
 }

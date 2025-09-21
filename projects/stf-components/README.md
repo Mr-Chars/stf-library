@@ -28,6 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 <!-- ng generate library stf-components -->
 
 <!-- ng generate component stf-button --project=stf-components -->
+<!-- ng g c components/stf-checkbox --project=stf-components -->
 
 <!-- ng build stf-components -->
 

@@ -20,7 +20,7 @@ export class SelectComponent {
     },
     {
       id: 2,
-      nombre: 'dato 2',
+      nombre: 'dato 2333333444444446666666666',
     },
     {
       id: 3,

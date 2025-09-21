@@ -16,12 +16,15 @@ export class StfTextComponent {
   @Input({ alias: 'stf-size' }) stf_size: 'title' | 'subtitle' | 'body' | 'detail' = 'title';
   @Input({ alias: 'stf-weight' }) stf_weight: '100' | '300' | '400' | '500' | '600' | '700' | '800' | '900' = '100';
   @Input({ alias: 'stf-align' }) stf_align: 'left' | 'center' | 'right' = 'left';
+  @Input({ alias: 'stf-one-line' }) stf_one_line: boolean = false;
 
   processClass() {
-    return `text-size-${this.stf_size} 
-    --color-${this.stf_color} 
-    --font-weight-${this.stf_weight} 
-    --text-align-${this.stf_align} 
+    const oneLine = this.stf_one_line ? 'one-line-text' : '';
+    return `text-size-${this.stf_size}
+    --color-${this.stf_color}
+    --font-weight-${this.stf_weight}
+    --text-align-${this.stf_align}
+    ${oneLine}
     `;
   }
 }

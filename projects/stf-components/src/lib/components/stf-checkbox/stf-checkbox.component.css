@@ -1,0 +1,42 @@
+.checkbox-container {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hidden-checkbox {
+  appearance: none;
+  /* Other properties to hide it visually but keep it accessible */
+  position: absolute;
+  opacity: 0;
+  width: 1em;
+  /* Adjust as needed */
+  height: 1em;
+  /* Adjust as needed */
+}
+
+.custom-checkmark {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #555;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  padding: 5px;
+}
+
+.hidden-checkbox:checked+.custom-checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.hidden-checkbox:checked+.custom-checkmark::after {
+  content: '✓';
+  /* Or use a background image for a custom checkmark */
+  display: block;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  line-height: 1em;
+}
