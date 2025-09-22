@@ -10,14 +10,23 @@ import { StfTextComponent } from '../stf-text/stf-text.component';
 })
 export class StfCheckboxComponent {
   @Input() label: string = '';
-  @Input() ngModel: boolean = false;
+  @Input() isChecked: boolean = false;
   @Input() isDisabled: boolean = false;
-  @Output() ngModelChange = new EventEmitter<boolean>();
+  @Output() ngChangeCheck = new EventEmitter<boolean>();
 
+  idUnique = 0;
+  ngOnInit() {
+    this.idUnique = Date.now() + this.getRandomIntInclusive(1, 99999);
+  }
   onCheckboxChange(event: Event) {
     const target = event.target as HTMLInputElement;
-    const newCheckedState = target.checked;
-    this.ngModel = newCheckedState;
-    this.ngModelChange.emit(this.ngModel);
+    this.isChecked = target.checked;
+    this.ngChangeCheck.emit(this.isChecked);
+  }
+
+  getRandomIntInclusive(min: number, max: number): number {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }

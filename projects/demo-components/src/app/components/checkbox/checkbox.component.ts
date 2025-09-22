@@ -15,8 +15,8 @@ export class CheckboxComponent {
   areTermsAccepted: boolean = false;
 
 
-  listenChange() {
-    console.log(this.areTermsAccepted);
+  listenChange(event: any) {
+    console.log(event);
 
   }
 }
