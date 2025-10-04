@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 export class StfIconDropdownComponent {
   @ViewChild('mainContainer') mainContainer!: ElementRef;
   @Input({ alias: 'stf-items' }) stf_items: Array<any> = [];
-  @Input({ alias: 'stf-position' }) stf_position: 'right' | 'left' = 'left';
+  @Input({ alias: 'stf-position' }) stf_position: 'right' | 'left' = 'right';
   @Output() emitOnClick = new EventEmitter();
 
   isOpen = signal(false);

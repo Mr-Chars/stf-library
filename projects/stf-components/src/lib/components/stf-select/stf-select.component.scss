@@ -19,20 +19,18 @@
 }
 
 stf-text {
-  width: 100%;
+  max-width: 80%;
+  padding: 0 10px;
 }
 
 .box-header {
   display: flex;
-  justify-content: space-between;
   border: 2px solid var(--color-black);
   padding: 5px 10px;
   cursor: pointer;
   height: 44.8px;
   box-sizing: border-box;
-  gap: 10px;
   border-radius: 4px;
-  width: 100%;
 }
 
 .box-header * {
@@ -90,10 +88,16 @@ stf-text {
   border-color: var(--color-success) !important;
 }
 
-.text-item-selected {
-  width: 80%;
-}
+// .text-item-selected {
+//   max-width: 80%;
+// }
 
 .text-item-to-choose {
   display: flex;
+}
+
+.icon-toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }

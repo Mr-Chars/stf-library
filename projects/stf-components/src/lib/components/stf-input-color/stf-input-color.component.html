@@ -1,44 +1,44 @@
 <div class="main-container" #mainContainer>
-    <div class="input-wrapper" (click)="togglePicker()">
-        <input type="text" [value]="selectedColor()" readonly class="color-input">
-        <div class="select-color" [style.background]="selectedColor()"></div>
-    </div>
+  <div class="input-wrapper" (click)="togglePicker()">
+    <input type="text" [value]="selectedColor()" readonly class="color-input">
+    <div class="select-color" [style.background]="selectedColor()"></div>
+  </div>
 
-    <div [style.display]="isOpen() ? 'flex' : 'none'" class="color-picker-container">
-        <div class="box-pick">
-            <!-- Círculo cromático -->
-            <div class="box-first-select-color">
-                <div class="hue-selector">
-                    <canvas #hueWheelCanvas width="200" height="200" (mousemove)="onHueWheelMove($event)"
-                        (click)="onHueWheelClick($event)"></canvas>
-                    <div class="hue-selector-cursor" [style.transform]="hueCursorTransform"></div>
-                </div>
-            </div>
-
-            <!-- Canvas principal -->
-            <canvas #colorPickerCanvas width="256" height="256" (mousemove)="onMouseMove($event)"
-                (click)="onColorSelect($event)"></canvas>
-
-            <!-- Visualización del color -->
-            <div class="box-color">
-                <div class="box-color-preview">
-                    <stf-text [stf-label]="'Color previsualización'" [stf-size]="'detail'" [stf-weight]="'700'"
-                        [stf-color]="'black'"></stf-text>
-                    <div class="color-preview" [style.background]="colorPreview.hex"></div>
-                    <p>RGB: {{ colorPreview.rgb }}</p>
-                    <p>HEX: {{ colorPreview.hex }}</p>
-                </div>
-                <div class="box-color-preview">
-                    <stf-text [stf-label]="'Color seleccionado'" [stf-size]="'detail'" [stf-weight]="'700'"
-                        [stf-color]="'black'"></stf-text>
-                    <div class="color-preview" [style.background]="colorSelected.hex"></div>
-                    <p>RGB2: {{ colorSelected.rgb }}</p>
-                    <p>HEX2: {{ colorSelected.hex }}</p>
-                </div>
-            </div>
+  <div [style.display]="isOpen() ? 'flex' : 'none'" class="color-picker-container">
+    <div class="box-pick flex-row">
+      <!-- Círculo cromático -->
+      <div class="flex-col flex-col-12 flex-col-sm-4 box-first-select-color">
+        <div class="hue-selector">
+          <canvas #hueWheelCanvas width="180" height="180" (mousemove)="onHueWheelMove($event)"
+            (click)="onHueWheelClick($event)"></canvas>
+          <div class="hue-selector-cursor" [style.transform]="hueCursorTransform"></div>
         </div>
+      </div>
 
-        <stf-button [stf-disabled]="false" [stf-color]="'primary'" [stf-animation]="1" [label]="'Seleccionar'"
-            (emitOnClick)="selectColor()"></stf-button>
+      <!-- Canvas principal -->
+      <canvas class="flex-col flex-col-12 flex-col-sm-4" #colorPickerCanvas width="256" height="256"
+        (mousemove)="onMouseMove($event)" (click)="onColorSelect($event)"></canvas>
+
+      <!-- Visualización del color -->
+      <div class="box-color flex-col flex-col-12 flex-col-sm-4">
+        <div class="box-color-preview">
+          <stf-text [stf-label]="'Color previsualización'" [stf-size]="'body'" [stf-weight]="'700'"
+            [stf-color]="'black'"></stf-text>
+          <div class="color-preview" [style.background]="colorPreview.hex"></div>
+          <p>RGB: {{ colorPreview.rgb }}</p>
+          <p>HEX: {{ colorPreview.hex }}</p>
+        </div>
+        <div class="box-color-preview">
+          <stf-text [stf-label]="'Color seleccionado'" [stf-size]="'body'" [stf-weight]="'700'"
+            [stf-color]="'black'"></stf-text>
+          <div class="color-preview" [style.background]="colorSelected.hex"></div>
+          <p>RGB2: {{ colorSelected.rgb }}</p>
+          <p>HEX2: {{ colorSelected.hex }}</p>
+        </div>
+      </div>
     </div>
+
+    <stf-button [stf-disabled]="false" [stf-color]="'primary'" [stf-animation]="1" [label]="'Seleccionar'"
+      (emitOnClick)="selectColor()"></stf-button>
+  </div>
 </div>

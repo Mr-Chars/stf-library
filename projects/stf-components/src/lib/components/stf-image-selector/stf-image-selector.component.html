@@ -1,14 +1,16 @@
 <div class="main-container" #mainContainer>
-    <div class="input-wrapper">
-        <stf-text class="--cursor-pointer" (click)="togglePicker()" [stf-label]="getLabelText()" [stf-size]="'detail'"
-            [stf-weight]="'700'" [stf-color]="'black'"></stf-text>
+  <div class="input-wrapper">
+    <stf-text class="--cursor-pointer" (click)="togglePicker()" [stf-label]="getLabelText()" [stf-size]="'detail'"
+      [stf-weight]="'700'" [stf-color]="'black'"></stf-text>
 
-        <img *ngIf="selectedImage && preview" [src]="selectedImage.url" alt="">
-    </div>
+    <img *ngIf="selectedImage && preview" [src]="selectedImage.url" alt="">
+  </div>
 
-    <div [style.display]="isOpen() ? 'flex' : 'none'" class="image-picker-container">
-        <div *ngFor="let image of images" class="image-thumbnail" (click)="selectImage(image)">
-            <img [src]="image[itemUrl]">
-        </div>
+  <div [style.display]="isOpen() ? 'flex' : 'none'" class="flex-row image-picker-container">
+    <div *ngFor="let image of images"
+      class="flex-col flex-col-6 flex-col-md-6 flex-col-lg-4 flex-col-xl-3 image-thumbnail"
+      (click)="selectImage(image)">
+      <img [src]="image[itemUrl]">
     </div>
+  </div>
 </div>
